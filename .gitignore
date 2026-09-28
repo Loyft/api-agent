@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.api-agent/
+*.log
+.DS_Store
+playwright-report/
+test-results/

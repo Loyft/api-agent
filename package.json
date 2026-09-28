@@ -1,0 +1,45 @@
+{
+  "name": "api-agent",
+  "version": "0.1.0",
+  "description": "Turn websites into local callable JSON APIs for Hermes and other agents",
+  "type": "module",
+  "bin": {
+    "api-agent": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "skill",
+    "examples",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "playwright install chromium || true"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "hermes",
+    "api",
+    "playwright",
+    "agent",
+    "openapi"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@hono/node-server": "^1.14.1",
+    "commander": "^13.1.0",
+    "hono": "^4.7.5",
+    "playwright": "^1.51.1",
+    "yaml": "^2.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "~5.8.2"
+  }
+}
